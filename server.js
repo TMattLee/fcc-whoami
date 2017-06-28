@@ -54,7 +54,7 @@ app.use(function(err, req, res, next) {
 })
 
 app.get('/api/whoami', function(req,res){
-  res.send(JSON.stringify(req));
+  res.send('who who who');
 })
 
 app.listen(process.env.PORT, function () {
