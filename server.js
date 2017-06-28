@@ -53,7 +53,7 @@ app.use(function(err, req, res, next) {
   }  
 })
 
-app.get('/api/whoami', function(req,res){
+app.get('/api/whoami/', function(req,res){
   res.send('who who who');
 })
 
