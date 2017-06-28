@@ -37,6 +37,12 @@ app.route('/')
     .get(function(req, res) {
 		  res.sendFile(process.cwd() + '/views/index.html');
     })
+    
+    
+app.get('/api/whoami', function(req,res){
+  res.send('who who who');
+})
+
 
 // Respond not found to all the wrong routes
 app.use(function(req, res, next){
@@ -53,10 +59,6 @@ app.use(function(err, req, res, next) {
   }  
 })
 
-app.route('/api/whoami/')
-  .get( function(req,res){
-  res.send('who who who');
-})
 
 app.listen(process.env.PORT, function () {
   console.log('Node.js listening ...');
