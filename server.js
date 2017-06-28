@@ -40,12 +40,22 @@ app.route('/')
     
     
 app.get('/api/whoami', function(req,res){
-  var ip = 1;
+  
   var headerArray = req.headers["user-agent"].split(/[()]+/)
     .filter(function(e) { return e; });
+    
+  var langArray = req.headers["accept-language"].split(',');
+  
+  
+  var ip = req.headers["x-forwarded-for"];
+  var lang = langArray[0];
   var os = headerArray[1];
   
-  res.send(req.headers);
+  res.send({
+    "ipaddress": ip,
+    "language": lang,
+    "software": os
+  });
 })
 
 
