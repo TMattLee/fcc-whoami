@@ -41,6 +41,7 @@ app.route('/')
     
 app.get('/api/whoami', function(req,res){
   res.send(req.headers);
+  res.send(req.headers["user-agent"]);
 })
 
 
