@@ -40,7 +40,12 @@ app.route('/')
     
     
 app.get('/api/whoami', function(req,res){
-  res.send(req.headers["user-agent"]);
+  var ip = 1;
+  var headerArray = req.headers["user-agent"].split(/[()]+/)
+    .filter(function(e) { return e; });
+  var os = headerArray[1];
+  
+  res.send(req.headers);
 })
 
 
