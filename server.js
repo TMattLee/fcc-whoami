@@ -46,7 +46,6 @@ app.get('/api/whoami', function(req,res){
     
   var langArray = req.headers["accept-language"].split(',');
   
-  
   var ip = req.headers["x-forwarded-for"];
   var lang = langArray[0];
   var os = headerArray[1];
