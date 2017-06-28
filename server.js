@@ -40,7 +40,7 @@ app.route('/')
     
     
 app.get('/api/whoami', function(req,res){
-  res.send('who who who');
+  res.send(req);
 })
 
 
