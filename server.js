@@ -40,7 +40,7 @@ app.route('/')
     
     
 app.get('/api/whoami', function(req,res){
-  res.send(JSON.stringify(req.headers));
+  res.send(req.headers);
 })
 
 
